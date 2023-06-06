@@ -1,9 +1,16 @@
 import { createBrowserRouter } from 'react-router-dom';
+import Root from './root';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1 className="bg-rose-600 text-white">Hello world!</h1>,
+    element: <Root />,
+    children: [
+      {
+        path: '/',
+        element: <h1 className="flex-1">Hello world!</h1>,
+      },
+    ],
   },
 ]);
 
