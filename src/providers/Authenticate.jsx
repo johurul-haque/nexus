@@ -1,11 +1,14 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 // eslint-disable-next-line react/prop-types
 const Authenticate = ({ children }) => {
+  const [loading, setLoading] = useState(false);
   const authInfo = {
     user: 'John',
+    loading,
+    setLoading,
   };
 
   return (
