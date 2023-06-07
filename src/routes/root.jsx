@@ -15,8 +15,6 @@ const Root = () => {
         <title>Home</title>
       </Helmet>
 
-      {/* <Preloading /> */}
-
       <Header />
       {loading ? (
         <div className="grid flex-1 place-items-center">
