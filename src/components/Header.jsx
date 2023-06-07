@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ActiveLink } from './ActiveLink';
 import Logo from './Logo';
 
 const Header = () => {
@@ -65,19 +66,19 @@ const Header = () => {
           </button>
           <ul className="gap-x-7 max-sm:space-y-3 sm:flex lg:gap-x-10">
             {[
-              ['Home', '/home'],
+              ['Home', '/'],
               ['Instructors', '/instructors'],
               ['Classes', '/classes'],
             ].map(([title, url], i) => (
-              <li key={i}>
-                <Link
-                  to={url}
-                  className="transition-all duration-200 hover:bg-gradient-to-r hover:from-violet-600 hover:from-50% hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent"
-                >
-                  {title}
-                </Link>
+              <li key={i} onClick={toggleMenu}>
+                <ActiveLink title={title} to={url} />
               </li>
             ))}
+            {user && (
+              <li onClick={toggleMenu}>
+                <ActiveLink title={'Dashboard'} to={'/dashboard'} />
+              </li>
+            )}
           </ul>
 
           {user ? (
@@ -91,8 +92,8 @@ const Header = () => {
               />
             </>
           ) : (
-            <Link to={'/login'} className="max-sm:mt-3">
-              Login
+            <Link to={'/signin'} className="max-sm:mt-3">
+              Sign-in
             </Link>
           )}
         </nav>
