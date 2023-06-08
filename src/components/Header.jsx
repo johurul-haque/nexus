@@ -20,7 +20,7 @@ const Header = () => {
         <Logo />
         <button
           onClick={toggleMenu}
-          className="rounded-full bg-fuchsia-50/70 p-2 transition-colors duration-200 hover:bg-fuchsia-100/70 sm:hidden"
+          className="ring-outline rounded-full bg-fuchsia-50/70 p-2 transition-colors duration-200 hover:bg-fuchsia-100/70 sm:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Header = () => {
         >
           <button
             onClick={toggleMenu}
-            className="absolute right-4 top-4 text-gray-700/60 sm:hidden"
+            className="ring-outline absolute right-4 top-4 text-gray-400/60 hover:text-gray-500/70 sm:hidden"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,10 @@ const Header = () => {
             <>
               <button
                 className="rounded-full bg-zinc-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 max-sm:mt-3"
-                onClick={logOut}
+                onClick={() => {
+                  logOut();
+                  toggleMenu();
+                }}
               >
                 Sign Out
               </button>
@@ -93,11 +96,12 @@ const Header = () => {
                 height={60}
                 src={user.photoURL}
                 alt={user.displayName}
-                className="aspect-square w-10 rounded-full object-cover text-xs max-sm:mt-3"
+                className="aspect-square w-16 rounded-full object-cover text-xs max-sm:-order-1 max-sm:mb-5 max-sm:justify-self-center sm:w-10"
               />
             </>
           ) : (
             <Link
+              onClick={toggleMenu}
               to={'/signin'}
               className="rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-1 text-center font-medium text-white outline-none ring-fuchsia-500 ring-offset-2 focus-visible:ring-1 max-sm:mt-3"
             >
