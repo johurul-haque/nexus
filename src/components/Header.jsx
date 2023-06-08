@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 border-b border-fuchsia-200/50 bg-white py-2">
+    <header className="sticky top-0 z-50 border-b border-fuchsia-200/50 bg-white py-2">
       <div className="container-padding mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
         <button

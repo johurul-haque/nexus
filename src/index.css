@@ -29,10 +29,28 @@
 
   @font-face {
     font-family: 'Switzer';
+    font-weight: 400;
+    font-style: italic;
+    src: url('assets/fonts/Switzer-Italic.woff2') format('woff2'),
+      url('assets/fonts/Switzer-Italic.woff') format('woff'),
+      url('assets/fonts/Switzer-Italic.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Switzer';
     font-weight: 500;
     src: url('assets/fonts/Switzer-Medium.woff2') format('woff2'),
       url('assets/fonts/Switzer-Medium.woff') format('woff'),
       url('assets/fonts/Switzer-Medium.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Switzer';
+    font-weight: 500;
+    font-style: italic;
+    src: url('assets/fonts/Switzer-MediumItalic.woff2') format('woff2'),
+      url('assets/fonts/Switzer-MediumItalic.woff') format('woff'),
+      url('assets/fonts/Switzer-MediumItalic.ttf') format('ttf');
   }
 
   @font-face {

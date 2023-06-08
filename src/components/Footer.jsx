@@ -3,11 +3,11 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer className="container-padding w-full bg-fuchsia-100/80 py-7 selection:bg-fuchsia-300/60 selection:text-fuchsia-900 md:py-10 md:pt-14">
-      <div className="mx-auto max-w-7xl text-gray-900">
+      <div className="mx-auto max-w-7xl tracking-wide text-fuchsia-950">
         <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-12">
           <div className="col-span-full lg:col-span-2 xl:pr-8">
             <Logo />
-            <p className="mt-4 text-base leading-relaxed text-gray-600">
+            <p className="bg mt-4 text-base leading-relaxed text-fuchsia-950/90">
               Explore a world of fun and excitement with our collection of toy
               cars! From speedy sports cars to mighty trucks and mini emergency
               vehicles, embark on thrilling adventures and let your imagination
@@ -16,12 +16,12 @@ const Footer = () => {
           </div>
           <div className="max-[480px]:col-span-2">
             <p className="text-base font-semibold ">Company</p>
-            <address className="mt-3 text-sm text-gray-800">
+            <address className="mt-3 text-sm text-fuchsia-950/90">
               <p>123 Main Street</p>
               <p>Nowhere, USA 12345</p>
               <a
                 href="mailto:hello@johurul.dev"
-                className="mt-2 flex items-center gap-2 text-base text-gray-600 transition-all duration-200 hover:bg-gradient-to-r hover:from-violet-600 hover:from-50% hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent"
+                className="mt-2 flex items-center gap-2 text-base transition-all duration-200 hover:bg-gradient-to-r hover:from-violet-600 hover:from-50% hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const Footer = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="aspect-square w-5 stroke-gray-700"
+                  className="aspect-square w-5 stroke-fuchsia-950/90"
                 >
                   <path
                     strokeLinecap="round"
@@ -48,7 +48,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="h-5 w-5 fill-gray-700"
+                  className="h-5 w-5 fill-fuchsia-950/90"
                 >
                   <path
                     fillRule="evenodd"
@@ -57,7 +57,7 @@ const Footer = () => {
                   />
                   <span className="sr-only">Call</span>
                 </svg>
-                <span className="text-gray-500 group-hover:bg-gradient-to-r group-hover:from-violet-600 group-hover:bg-clip-text group-hover:text-transparent">
+                <span className="text-fuchsia-900/70 group-hover:bg-gradient-to-r group-hover:from-violet-600 group-hover:bg-clip-text group-hover:text-transparent">
                   +880
                 </span>
                 1234-567890
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
           <div>
             <p className="text-base font-semibold">Help</p>
-            <ul className="mt-3 space-y-3 text-gray-800">
+            <ul className="mt-3 space-y-3">
               {[
                 ['Customer Support'],
                 ['Delivery Details'],
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
         <hr className="mb-7 mt-8 rounded-full border-fuchsia-300/50" />
         <div className="flex-wrap items-center justify-between sm:flex">
-          <p className="text-sm text-gray-600 max-sm:text-center">
+          <p className="text-sm text-fuchsia-900/90 max-sm:text-center">
             © Copyright 2023, All Rights Reserved by Wheeltopia
           </p>
           <ul className="mt-5 flex items-center justify-center space-x-3 sm:mt-0 md:order-3">

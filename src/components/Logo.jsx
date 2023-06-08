@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <Link
       to={'/'}
-      className="font-fredoka ring-outline flex max-w-fit items-center gap-2 rounded-sm text-lg font-medium sm:text-xl"
+      className="ring-outline flex max-w-fit items-center gap-2 rounded-sm text-lg font-semibold sm:text-xl"
     >
       <img
         src="/wheeltopia.jpg"
