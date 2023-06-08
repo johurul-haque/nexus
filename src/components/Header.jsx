@@ -1,12 +1,11 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/Authenticate';
 import { ActiveLink } from './ActiveLink';
 import Logo from './Logo';
 
 const Header = () => {
-  const user = {
-    name: 'Michael',
-    email: 'anpch@example.com',
-  };
+  const { user, logOut } = useContext(AuthContext);
 
   const toggleMenu = () => {
     const nav = document.querySelector('#main-nav');
@@ -83,16 +82,25 @@ const Header = () => {
 
           {user ? (
             <>
+              <button
+                className="rounded-full bg-zinc-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 max-sm:mt-3"
+                onClick={logOut}
+              >
+                Sign Out
+              </button>
               <img
                 width={60}
                 height={60}
-                src="wheeltopia.jpg"
-                alt="wheeltopia"
-                className="aspect-square w-10 rounded-full object-cover max-sm:mt-3"
+                src={user.photoURL}
+                alt={user.displayName}
+                className="aspect-square w-10 rounded-full object-cover text-xs max-sm:mt-3"
               />
             </>
           ) : (
-            <Link to={'/signin'} className="max-sm:mt-3">
+            <Link
+              to={'/signin'}
+              className="rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-1 text-center font-medium text-white outline-none ring-fuchsia-500 ring-offset-2 focus-visible:ring-1 max-sm:mt-3"
+            >
               Sign-in
             </Link>
           )}

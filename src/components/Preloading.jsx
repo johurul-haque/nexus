@@ -1,17 +1,10 @@
 const Preloading = () => {
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const preloading = document.querySelector('#preloading');
-      preloading.classList.add('opacity-0');
-      preloading.setAttribute('aria-hidden', 'true');
-    }, 1000);
-  });
 
   return (
     <div
       role="status"
       id="preloading"
-      className="pointer-events-none absolute grid h-full w-full touch-none place-items-center border bg-fuchsia-100 transition-all duration-300"
+      className="pointer-events-none absolute z-50 grid h-full w-full touch-none place-items-center border bg-fuchsia-100 transition-all duration-300"
     >
       <div>
         <div className="loader">

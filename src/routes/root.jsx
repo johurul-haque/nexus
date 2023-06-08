@@ -9,7 +9,12 @@ import { AuthContext } from '../providers/Authenticate';
 const Root = () => {
   const { loading } = useContext(AuthContext);
   const pathname = useLocation();
-  console.log(pathname);
+
+  /*  window.addEventListener('load', () => {
+    const preloading = document.querySelector('#preloading');
+    preloading.classList.add('opacity-0');
+    preloading.setAttribute('aria-hidden', 'true');
+  }); */
 
   useEffect(() => {
     scrollTo(0, 0);
@@ -18,8 +23,10 @@ const Root = () => {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Design Nexus</title>
       </Helmet>
+
+      {/* <Preloading /> */}
 
       <Header />
       {loading ? (

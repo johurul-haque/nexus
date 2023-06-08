@@ -12,7 +12,7 @@ const Logo = () => {
         className="aspect-square w-14 object-contain text-xs font-light"
       />
       <span className="bg-gradient-to-br from-green-600 from-0% via-lime-500 via-60% to-lime-400 bg-clip-text text-transparent">
-        Wheeltopia
+        dNEXUS
       </span>
     </Link>
   );
