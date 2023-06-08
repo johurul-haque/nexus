@@ -103,7 +103,9 @@ const Register = () => {
             required
           />
           <button className="flex h-12 items-center justify-center gap-2 rounded bg-gradient-to-r from-violet-600 to-fuchsia-600 text-lg font-semibold text-white outline-none ring-fuchsia-500 ring-offset-2 focus-visible:ring-2">
-            {loading && <Loading width={5} fill="fuchsia-600" text="white" />}
+            {loading && (
+              <Loading width={5} fill="fill-fuchsia-600" text="text-white" />
+            )}
             Continue
           </button>
         </form>

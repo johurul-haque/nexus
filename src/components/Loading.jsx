@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 const Loading = ({
   width = 10,
-  fill = 'fuchsia-700',
-  text = 'fuchsia-200/80',
+  fill = 'fill-fuchsia-700',
+  text = 'text-fuchsia-200/80',
 }) => {
   return (
     <div role="status">
       <svg
         aria-hidden="true"
-        className={`aspect-square w-${width} animate-spin fill-${fill} text-${text}`}
+        className={`aspect-square w-${width} animate-spin ${fill} ${text}`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
