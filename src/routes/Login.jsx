@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 import { AuthContext } from '../providers/Authenticate';
 
 const Login = () => {
-  const { signIn, setUser } = useContext(AuthContext);
+  const { signIn, setUser, popupLogin } = useContext(AuthContext);
 
   const { register, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false),
@@ -71,7 +71,9 @@ const Login = () => {
           />
           {error}
           <button className="flex h-12 items-center justify-center gap-2 rounded bg-gradient-to-br from-violet-600 to-fuchsia-600 text-lg font-semibold text-white outline-none ring-fuchsia-500 ring-offset-2 focus-visible:ring-2">
-            {loading && <Loading width={5} fill="fill-fuchsia-600" text="text-white" />}
+            {loading && (
+              <Loading width={5} fill="fill-fuchsia-600" text="text-white" />
+            )}
             Continue
           </button>
         </form>
@@ -89,7 +91,10 @@ const Login = () => {
           OR
           <hr className="basis-1/2 rounded-full" />
         </div>
-        <button className="flex h-12 w-full items-center gap-3 rounded border px-4 text-base font-medium text-gray-600 outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 hover:bg-gray-200 focus-visible:ring-2">
+        <button
+          onClick={popupLogin}
+          className="flex h-12 w-full items-center gap-3 rounded border px-4 text-base font-medium text-gray-600 outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 hover:bg-gray-200 focus-visible:ring-2"
+        >
           <img
             src={google}
             alt="Google"
