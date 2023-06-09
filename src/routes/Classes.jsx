@@ -86,13 +86,13 @@ const Classes = () => {
                 </dd>
               </dl>
               {item.availableSeats ? (
-                <button className="mt-auto h-9 w-full self-baseline bg-gradient-to-tr from-fuchsia-600 to-violet-600 text-center text-white outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 focus-visible:ring-2">
+                <button className="mt-auto h-9 w-full self-baseline bg-violet-600 text-center font-medium uppercase text-white outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 focus-visible:ring-2">
                   Select
                 </button>
               ) : (
                 <button
                   disabled="true"
-                  className="mt-auto h-9 w-full self-baseline bg-slate-300 text-center text-slate-700"
+                  className="mt-auto h-9 w-full self-baseline bg-slate-300 text-center font-medium uppercase text-slate-700"
                 >
                   Select
                 </button>
