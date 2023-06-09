@@ -2,6 +2,8 @@ import { updateProfile } from 'firebase/auth';
 import { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
+import Animate from '../components/Animate';
+
 import { Link } from 'react-router-dom';
 import google from '../assets/svg/google.svg';
 import Loading from '../components/Loading';
@@ -48,7 +50,7 @@ const Register = () => {
         <title>Nexus - Register</title>
       </Helmet>
 
-      <main className="mx-auto my-16 max-w-xs text-center text-gray-800">
+      <Animate className="mx-auto my-16 max-w-xs text-center text-gray-800">
         <h1 className="text-4xl font-bold">Register</h1>
         <p className="mb-5 mt-2">
           Greetings! We kindly request you to enter your details
@@ -140,7 +142,7 @@ const Register = () => {
           />
           Continue with Google
         </button>
-      </main>
+      </Animate>
     </>
   );
 };

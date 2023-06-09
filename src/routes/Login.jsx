@@ -2,6 +2,8 @@ import { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import Animate from '../components/Animate';
+
 import google from '../assets/svg/google.svg';
 import Loading from '../components/Loading';
 import { AuthContext } from '../providers/Authenticate';
@@ -48,7 +50,7 @@ const Login = () => {
         <title>Nexus - Login</title>
       </Helmet>
 
-      <main className="mx-auto my-16 max-w-xs text-center text-gray-800">
+      <Animate className="mx-auto my-16 max-w-xs text-center text-gray-800">
         <h1 className="mb-7 text-4xl font-bold">Welcome back</h1>
         <form
           onSubmit={handleSubmit(login)}
@@ -108,7 +110,7 @@ const Login = () => {
           />
           Continue with Google
         </button>
-      </main>
+      </Animate>
     </>
   );
 };

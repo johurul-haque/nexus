@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { sofa } from '../assets/images';
 import Animate from '../components/Animate';
-import Skeleton from '../components/Skeleton';
+import { Instructor as Skeleton } from '../components/Skeleton';
 
 const Instructors = () => {
   const [data, setData] = useState([]);
@@ -33,7 +33,7 @@ const Instructors = () => {
               {data.map((item, idx) => (
                 <figure key={idx} className="grid w-52 justify-center">
                   <div className="relative mb-3">
-                    <div className="absolute -bottom-2 -right-2 -z-20 h-full w-full bg-gradient-to-br from-violet-600 to-fuchsia-600 to-90%"></div>
+                    <div className="absolute -bottom-2 -right-2 -z-20 h-full w-full bg-gradient-to-br from-violet-600 to-fuchsia-600 to-90% opacity-70"></div>
                     <img
                       className="aspect-[4/5] w-52 object-cover object-left"
                       src={sofa}

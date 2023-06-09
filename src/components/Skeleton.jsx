@@ -1,4 +1,4 @@
-const Skeleton = () => {
+export const Instructor = () => {
   return (
     <div className="mb-10 mt-7 grid grid-cols-[repeat(auto-fit,minmax(10rem,13rem))] justify-center gap-x-7 gap-y-7">
       {Array.from({ length: 10 }, (_, i) => i + 1).map((id) => (
@@ -31,4 +31,22 @@ const Skeleton = () => {
     </div>
   );
 };
-export default Skeleton;
+
+export const Classes = () => {
+  return (
+    <div className="my-6 grid grid-cols-[repeat(auto-fit,minmax(10rem,17rem))] justify-center gap-6">
+      {Array.from({ length: 12 }, (_, i) => i + 1).map((id) => (
+        <article className="flex flex-col border p-4" key={id}>
+          <div className="aspect-video animate-pulse bg-slate-200"></div>
+          <h2 className="my-3 h-5 animate-pulse bg-slate-200"></h2>
+
+          <dl className="mb-3 flex items-center justify-between">
+            <dd className="flex h-5 grow animate-pulse items-center bg-slate-200"></dd>
+            <dd className="ml-3 h-5 basis-10 animate-pulse bg-slate-200"></dd>
+          </dl>
+          <button className="mt-auto h-8 w-full animate-pulse self-baseline bg-slate-200"></button>
+        </article>
+      ))}
+    </div>
+  );
+};
