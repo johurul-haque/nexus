@@ -1,3 +1,5 @@
+import { AnimatePresence } from 'framer-motion';
+import * as React from 'react';
 import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -29,14 +31,17 @@ const Root = () => {
       {/* <Preloading /> */}
 
       <Header />
+
       {loading ? (
         <div className="grid flex-1 place-items-center">
           <Loading />
         </div>
       ) : (
-        <div className="flex-1 transition-all duration-300">
-          <Outlet />
-        </div>
+        <AnimatePresence>
+          <div className="flex-1 transition-all duration-300">
+            {React.cloneElement(<Outlet />, { key: pathname.pathname })}
+          </div>
+        </AnimatePresence>
       )}
       <Footer />
     </>

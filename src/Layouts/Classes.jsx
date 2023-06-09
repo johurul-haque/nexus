@@ -17,7 +17,7 @@ const Classes = () => {
         {data.map((item, index) => (
           <article key={index} className="max-w-[16rem]">
             <div className="relative bg-black">
-              <h3 className="absolute bottom-3 z-50 px-3 text-base font-medium leading-tight tracking-wide text-white">
+              <h3 className="absolute bottom-3 z-40 px-3 text-base font-medium leading-tight tracking-wide text-white">
                 {item.name}
               </h3>
               <img

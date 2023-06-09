@@ -46,7 +46,7 @@ const HeroSection = () => {
           </h2>
         </SwiperSlide>
         <SwiperSlide>
-          <figure className="absolute left-1/2 top-[30%] z-50 -translate-x-1/2 italic">
+          <figure className="absolute left-1/2 top-[30%] z-40 -translate-x-1/2 italic">
             <blockquote className="w-full max-w-sm leading-tight tracking-wider text-amber-950 max-[450px]:w-[14rem] max-[450px]:text-base max-[315px]:hidden sm:text-xl lg:max-w-md lg:text-2xl lg:font-medium">
               <p>Design adds value faster than it adds costs.</p>
             </blockquote>
@@ -67,7 +67,7 @@ const HeroSection = () => {
         </SwiperSlide>
         <SwiperSlide>
           {' '}
-          <figure className="absolute left-1/2 top-1/4 z-50 -translate-x-1/2 italic">
+          <figure className="absolute left-1/2 top-1/4 z-40 -translate-x-1/2 italic">
             <blockquote className="w-full max-w-sm leading-tight tracking-wider text-amber-950 max-[450px]:w-[14rem] max-[450px]:text-base max-[315px]:hidden sm:text-xl lg:max-w-md lg:text-2xl lg:font-medium">
               <p>
                 Design is not just what it looks and feels like. Design is how
