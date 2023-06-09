@@ -115,8 +115,7 @@ const Footer = () => {
                 href="https://github.com/johurul-haque"
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-fuchsia-300/50 bg-transparent text-gray-800 transition-all duration-200 hover:rounded-full hover:border-transparent
-                  hover:bg-gradient-to-br hover:from-violet-600 hover:to-fuchsia-600 hover:text-white"
+                className="flex h-7 w-7 items-center justify-center rounded-full border border-fuchsia-300/50 bg-transparent text-gray-800 transition-all duration-200 hover:rounded-full hover:border-transparent hover:bg-gradient-to-br hover:from-violet-600 hover:to-fuchsia-600 hover:text-white"
               >
                 <svg
                   className="h-4 w-4"

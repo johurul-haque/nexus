@@ -1,0 +1,34 @@
+{
+  "popularInstructors": [
+    {
+      "image": "image_url_1",
+      "name": "Michael Thompson",
+      "email": "michael@gmail.com"
+    },
+    {
+      "image": "image_url_2",
+      "name": "David Reynolds",
+      "email": "david@gmail.com"
+    },
+    {
+      "image": "image_url_3",
+      "name": "James Clarke",
+      "email": "james@gmail.com"
+    },
+    {
+      "image": "image_url_4",
+      "name": "Alex Mitchell",
+      "email": "alex@gmail.com"
+    },
+    {
+      "image": "image_url_5",
+      "name": "Nathan Harris",
+      "email": "nathan@gmail.com"
+    },
+    {
+      "image": "image_url_6",
+      "name": "Daniel Reed",
+      "email": "daniel@gmail.com"
+    }
+  ]
+}

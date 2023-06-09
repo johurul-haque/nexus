@@ -1,0 +1,52 @@
+{
+  "popularClasses": [
+    {
+      "image": "image_url_1",
+      "name": "Introduction to Graphic Design",
+      "instructor": "Michael Thompson",
+      "availableSeats": 20,
+      "price": 49.99,
+      "enrolledStudents": 15
+    },
+    {
+      "image": "image_url_2",
+      "name": "Typography Fundamentals",
+      "instructor": "David Reynolds",
+      "availableSeats": 15,
+      "price": 79.99,
+      "enrolledStudents": 10
+    },
+    {
+      "image": "image_url_3",
+      "name": "Web Design for Beginners",
+      "instructor": "James Clarke",
+      "availableSeats": 10,
+      "price": 59.99,
+      "enrolledStudents": 8
+    },
+    {
+      "image": "image_url_4",
+      "name": "User Experience Design",
+      "instructor": "Alex Mitchell",
+      "availableSeats": 12,
+      "price": 99.99,
+      "enrolledStudents": 11
+    },
+    {
+      "image": "image_url_5",
+      "name": "Logo Design Workshop",
+      "instructor": "Nathan Harris",
+      "availableSeats": 8,
+      "price": 69.99,
+      "enrolledStudents": 6
+    },
+    {
+      "image": "image_url_6",
+      "name": "Digital Illustration Techniques",
+      "instructor": "Daniel Reed",
+      "availableSeats": 18,
+      "price": 89.99,
+      "enrolledStudents": 13
+    }
+  ]
+}
