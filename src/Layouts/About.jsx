@@ -2,11 +2,11 @@ import { sofa } from '../assets/images';
 
 const About = () => {
   return (
-    <section className="my-10 grid gap-7 selection:bg-violet-200 selection:text-violet-900 md:grid-cols-2">
-      <h2 className="-order-1 col-span-full text-center text-xl font-semibold lg:text-2xl">
+    <section className="my-10 grid gap-7 selection:bg-violet-200 selection:text-violet-900 lg:grid-cols-2">
+      <h2 className="-order-1 col-span-full text-xl font-semibold max-lg:text-center lg:text-2xl">
         About Us
       </h2>
-      <div className="mx-auto max-w-[65ch] space-y-3 text-lg leading-relaxed tracking-wide md:tracking-wider">
+      <div className="mx-auto max-w-[65ch] space-y-3 text-justify leading-relaxed tracking-wide max-lg:text-lg md:tracking-wider">
         <p>
           {' '}
           Introducing Design Nexus, a premier destination for creative
@@ -53,7 +53,7 @@ const About = () => {
       <img
         src={sofa}
         alt=""
-        className="aspect-[4/5] rounded-t-full object-cover object-left max-sm:-order-1"
+        className="mx-auto aspect-[4/5] rounded-t-full object-cover object-left max-lg:-order-1 max-lg:max-w-[65ch]"
       />
     </section>
   );

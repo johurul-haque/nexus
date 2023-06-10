@@ -26,12 +26,25 @@ const Authenticate = ({ children }) => {
 
   const popupLogin = () => {
     signInWithPopup(auth, googleProvider)
-      .then(() => {})
+      .then((userCredential) => {
+        if (userCredential) {
+          fetch(`${import.meta.env.VITE_SERVER}/users`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: userCredential.user.displayName,
+              email: userCredential.user.email,
+            }),
+          });
+        }
+      })
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
+    onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       setLoading(false);
     });

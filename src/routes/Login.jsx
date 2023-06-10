@@ -23,6 +23,16 @@ const Login = () => {
       .then((userCredential) => {
         setUser(userCredential.user);
         reset();
+        fetch(`${import.meta.env.VITE_SERVER}/users`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: userCredential.user.displayName,
+            email: userCredential.user.email,
+          }),
+        });
         setLoading(false);
       })
       .catch((error) => {

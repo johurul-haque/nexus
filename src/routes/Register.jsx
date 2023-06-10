@@ -32,8 +32,18 @@ const Register = () => {
             displayName: data.user,
             photoURL: data.profile,
           });
-          setLoading(false);
+          fetch(`${import.meta.env.VITE_SERVER}/users`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: data.user,
+              email: data.email,
+            }),
+          });
           reset();
+          setLoading(false);
         })
         .catch((error) => console.error(error.message));
     } else {
