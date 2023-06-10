@@ -8,10 +8,12 @@ const Footer = () => {
           <div className="col-span-full lg:col-span-2 xl:pr-8">
             <Logo />
             <p className="bg mt-4 text-base leading-relaxed text-fuchsia-950/90">
-              Explore a world of fun and excitement with our collection of toy
-              cars! From speedy sports cars to mighty trucks and mini emergency
-              vehicles, embark on thrilling adventures and let your imagination
-              soar in our playful car wonderland.
+              Discover the top classes handpicked by our experts, featuring
+              cutting-edge topics such as Advanced UI/UX Design, Motion Graphics
+              Masterclass, Web Development Bootcamp, and more. Immerse yourself
+              in captivating lessons that combine theoretical knowledge with
+              practical applications, enabling you to create impactful designs
+              and leave a lasting impression.
             </p>
           </div>
           <div className="max-[480px]:col-span-2">

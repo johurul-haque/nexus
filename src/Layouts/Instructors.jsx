@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-import { sofa } from '../assets/images';
 
 const Instructors = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('/instructor.json')
+    fetch(`${import.meta.env.VITE_SERVER}/instructors?limit=6`)
       .then((res) => res.json())
-      .then((data) => setData(data.popularInstructors));
+      .then((data) => setData(data));
   }, []);
   return (
     <section className="my-10">
@@ -17,8 +16,8 @@ const Instructors = () => {
         {data.map((item, idx) => (
           <figure key={idx} className="grid justify-center text-center">
             <img
-              className="mb-3 aspect-square w-52 rounded-full text-sm drop-shadow-2xl"
-              src={sofa}
+              className="mb-3 aspect-square w-52 rounded-full bg-slate-200 object-cover object-top text-sm drop-shadow-2xl"
+              src={item.image}
               width={128}
               height={128}
               alt={item.name}

@@ -1,34 +1,47 @@
-{
-  "popularInstructors": [
-    {
-      "image": "image_url_1",
-      "name": "Michael Thompson",
-      "email": "michael@gmail.com"
-    },
-    {
-      "image": "image_url_2",
-      "name": "David Reynolds",
-      "email": "david@gmail.com"
-    },
-    {
-      "image": "image_url_3",
-      "name": "James Clarke",
-      "email": "james@gmail.com"
-    },
-    {
-      "image": "image_url_4",
-      "name": "Alex Mitchell",
-      "email": "alex@gmail.com"
-    },
-    {
-      "image": "image_url_5",
-      "name": "Nathan Harris",
-      "email": "nathan@gmail.com"
-    },
-    {
-      "image": "image_url_6",
-      "name": "Daniel Reed",
-      "email": "daniel@gmail.com"
-    }
-  ]
-}
+[
+  {
+    "image": "/images/instructor-1.webp",
+    "name": "Michael Thompson",
+    "email": "michael@gmail.com"
+  },
+  {
+    "image": "/images/instructor-2.webp",
+    "name": "David Reynolds",
+    "email": "david@gmail.com"
+  },
+  {
+    "image": "/images/instructor-3.webp",
+    "name": "James Clarke",
+    "email": "james@gmail.com"
+  },
+  {
+    "image": "/images/instructor-4.webp",
+    "name": "Alex Mitchell",
+    "email": "alex@gmail.com"
+  },
+  {
+    "image": "/images/instructor-5.webp",
+    "name": "Nathan Harris",
+    "email": "nathan@gmail.com"
+  },
+  {
+    "image": "/images/instructor-6.webp",
+    "name": "Daniel Reed",
+    "email": "daniel@gmail.com"
+  },
+  {
+    "image": "/images/instructor-7.webp",
+    "name": "Andrew Anderson",
+    "email": "andrew@gmail.com"
+  },
+  {
+    "image": "/images/instructor-8.webp",
+    "name": "Robert Cooper",
+    "email": "robert@gmail.com"
+  },
+  {
+    "image": "/images/instructor-9.webp",
+    "name": "Joseph Mitchell",
+    "email": "joseph@gmail.com"
+  }
+]

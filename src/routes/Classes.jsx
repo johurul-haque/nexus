@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-import { sofa } from '../assets/images';
 import Animate from '../components/Animate';
 import Modal from '../components/Modal';
 import { Classes as Skeleton } from '../components/Skeleton';
@@ -22,9 +21,9 @@ const Classes = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('/classes.json');
+      const res = await fetch(`${import.meta.env.VITE_SERVER}/classes`);
       const data = await res.json();
-      setData(data.classes);
+      setData(data);
       setTimeout(() => setLoading(false), 600);
     };
     fetchData();
@@ -52,7 +51,11 @@ const Classes = () => {
       }
       e.currentTarget.innerText = 'Selected';
       e.currentTarget.classList.add('bg-violet-300', 'text-violet-950');
-      e.currentTarget.classList.remove('hover:bg-violet-700');
+      e.currentTarget.classList.remove(
+        'hover:bg-violet-700',
+        'bg-violet-600',
+        'text-white'
+      );
     }
   };
 
@@ -75,7 +78,7 @@ const Classes = () => {
               <div className="relative">
                 <img
                   className="aspect-video w-full bg-slate-100 object-cover text-sm"
-                  src={sofa}
+                  src={item.image}
                   alt={item.name}
                   width={1920}
                   height={1080}

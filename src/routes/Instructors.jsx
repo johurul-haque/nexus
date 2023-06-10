@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { sofa } from '../assets/images';
 import Animate from '../components/Animate';
 import { Instructor as Skeleton } from '../components/Skeleton';
 
@@ -8,10 +7,10 @@ const Instructors = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch('/instructor.json')
+    fetch(`${import.meta.env.VITE_SERVER}/instructors`)
       .then((res) => res.json())
       .then((data) => {
-        setData(data.popularInstructors);
+        setData(data);
         setTimeout(() => setLoading(false), 600);
       });
   }, []);
@@ -35,8 +34,8 @@ const Instructors = () => {
                   <div className="relative mb-3">
                     <div className="absolute -bottom-2 -right-2 -z-20 h-full w-full bg-gradient-to-br from-violet-600 to-fuchsia-600 to-90% opacity-70"></div>
                     <img
-                      className="aspect-[4/5] w-52 object-cover object-left"
-                      src={sofa}
+                      className="aspect-[4/5] w-52 object-cover object-top"
+                      src={item.image}
                       width={102}
                       height={128}
                       alt={item.name}

@@ -1,3 +1,4 @@
+import About from '../Layouts/About';
 import Classes from '../Layouts/Classes';
 import HeroSection from '../Layouts/HeroSection';
 import Instructors from '../Layouts/Instructors';
@@ -10,6 +11,7 @@ const Home = () => {
         <HeroSection />
         <Classes />
         <Instructors />
+        <About />
 
         {/* TODO: Create an extra section with animation */}
       </div>

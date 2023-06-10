@@ -40,7 +40,7 @@ export default function Modal({ isOpen, closeModal }) {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Your need to be login to select this class.
+                      Your need to be logged in to select any class.
                     </p>
                   </div>
 

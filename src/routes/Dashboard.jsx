@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { sofa } from '../assets/images';
 import Animate from '../components/Animate';
 import { Classes as Skeleton } from '../components/Skeleton';
 
@@ -50,7 +49,7 @@ const Dashboard = () => {
               <div className="relative">
                 <img
                   className="aspect-video w-full bg-slate-100 object-cover text-sm"
-                  src={sofa}
+                  src={item.image}
                   alt={item.name}
                   width={1920}
                   height={1080}
@@ -97,8 +96,8 @@ const Dashboard = () => {
               </dl>
               <div className="mt-auto flex w-full gap-2">
                 <Link
-                  to={'/payment'}
-                  className="grid h-9 grow place-items-center bg-violet-600 text-center uppercase text-white outline-none ring-violet-400 ring-offset-2 transition-all duration-200 hover:bg-violet-700 focus-visible:ring-2"
+                  to={`/payment?price=${item.price.toFixed(0)}`}
+                  className="grid h-9 grow place-items-center bg-amber-300 text-center font-medium uppercase text-amber-800 outline-none ring-amber-300/80 ring-offset-2 transition-all duration-200 hover:bg-amber-400 focus-visible:ring-2"
                 >
                   Purchase
                 </Link>

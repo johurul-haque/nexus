@@ -1,28 +1,27 @@
 import { useEffect, useState } from 'react';
-import { sofa } from '../assets/images';
 
 const Classes = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('/fake.json')
+    fetch(`${import.meta.env.VITE_SERVER}/classes?limit=6`)
       .then((res) => res.json())
-      .then((data) => setData(data.popularClasses));
+      .then((data) => setData(data));
   }, []);
   return (
     <section className="my-7">
       <h2 className="text-center text-xl font-semibold lg:text-2xl">
         Popular Classes
       </h2>
-      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(8rem,16rem))] justify-center gap-5">
+      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(8rem,18rem))] justify-center gap-5">
         {data.map((item, index) => (
-          <article key={index} className="max-w-[16rem]">
+          <article key={index} className="max-w-[18rem]">
             <div className="relative bg-black">
               <h3 className="absolute bottom-3 z-40 px-3 text-base font-medium leading-tight tracking-wide text-white">
                 {item.name}
               </h3>
               <img
-                className="relative aspect-[4/5] object-cover object-left [mask-image:linear-gradient(#000_65%,transparent)]"
-                src={sofa}
+                className="relative aspect-video object-cover [mask-image:linear-gradient(#000_65%,transparent)]"
+                src={item.image}
                 alt={item.name}
               />
             </div>

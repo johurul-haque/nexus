@@ -83,7 +83,7 @@ const Header = () => {
           {user ? (
             <>
               <button
-                className="rounded-full bg-zinc-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 max-sm:mt-3"
+                className="rounded-full bg-slate-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 max-sm:mt-3"
                 onClick={() => {
                   logOut();
                   toggleMenu();
