@@ -1,20 +1,61 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { sofa } from '../assets/images';
 import Animate from '../components/Animate';
+import Modal from '../components/Modal';
 import { Classes as Skeleton } from '../components/Skeleton';
+import { AuthContext } from '../providers/Authenticate';
 
 const Classes = () => {
+  const { user } = useContext(AuthContext);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch('/classes.json');
       const data = await res.json();
       setData(data.classes);
-      setTimeout(() => setLoading(false), 1000);
+      setTimeout(() => setLoading(false), 600);
     };
     fetchData();
   }, []);
+
+  let localStorageData = [];
+
+  if (localStorage.getItem('selected-class')) {
+    localStorageData = JSON.parse(localStorage.getItem('selected-class'));
+  }
+
+  const select = (item, e) => {
+    if (!user) {
+      openModal();
+    } else {
+      const filterItem = JSON.parse(
+        localStorage.getItem('selected-class')
+      )?.filter((data) => item.name == data.name);
+      if (filterItem?.length == 0 || !filterItem) {
+        localStorageData.push(item);
+        localStorage.setItem(
+          'selected-class',
+          JSON.stringify(localStorageData)
+        );
+      }
+      e.currentTarget.innerText = 'Selected';
+      e.currentTarget.classList.add('bg-violet-300', 'text-violet-950');
+      e.currentTarget.classList.remove('hover:bg-violet-700');
+    }
+  };
+
   return (
     <Animate className="container-padding mx-auto mb-10 mt-7 max-w-7xl">
       <h1 className="text-center text-2xl font-medium text-fuchsia-950 lg:text-3xl lg:font-semibold">
@@ -86,12 +127,28 @@ const Classes = () => {
                 </dd>
               </dl>
               {item.availableSeats ? (
-                <button className="mt-auto h-9 w-full self-baseline bg-violet-600 text-center font-medium uppercase text-white outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 focus-visible:ring-2">
-                  Select
-                </button>
+                <>
+                  <button
+                    onClick={(e) => select(item, e)}
+                    className={`mt-auto h-9 w-full self-baseline  text-center font-medium uppercase  outline-none ring-violet-400 ring-offset-2 transition-all duration-200 focus-visible:ring-2 ${
+                      JSON.parse(
+                        localStorage.getItem('selected-class')
+                      )?.filter((data) => item.name == data.name).length > 0
+                        ? 'bg-violet-300 text-violet-950'
+                        : 'bg-violet-600 text-white hover:bg-violet-700'
+                    }`}
+                  >
+                    {JSON.parse(localStorage.getItem('selected-class'))?.filter(
+                      (data) => item.name == data.name
+                    ).length > 0
+                      ? 'selected'
+                      : 'select'}
+                  </button>
+                  <Modal isOpen={isOpen} closeModal={closeModal} />
+                </>
               ) : (
                 <button
-                  disabled="true"
+                  disabled={true}
                   className="mt-auto h-9 w-full self-baseline bg-slate-300 text-center font-medium uppercase text-slate-700"
                 >
                   Select
