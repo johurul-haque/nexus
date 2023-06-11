@@ -18,7 +18,7 @@ const Instructors = () => {
   return (
     <>
       <Helmet>
-        <title>Nexus - Instructors</title>
+        <title>Instructors - Nexus</title>
       </Helmet>
       <Animate className="container-padding mb-10 mt-7">
         <div className="mx-auto max-w-7xl">

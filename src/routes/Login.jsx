@@ -68,7 +68,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Nexus - Login</title>
+        <title>Login - Nexus</title>
       </Helmet>
 
       <Animate className="mx-auto my-16 max-w-xs text-center text-gray-800">
