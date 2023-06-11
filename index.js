@@ -32,7 +32,7 @@ async function run() {
     app.get('/', (req, res) => {
       res.send(`<main>
       <h1>Hi, I'm Johurul!</h1>
-      <p>An aspiring front-end dev, creating high quality web apps.</p>
+      <p>An aspiring front-end dev, creating high-quality web apps.</p>
       <a href="https://www.linkedin.com/in/johurul-haque/">Linkedin</a>
       </main>`);
     });
@@ -60,6 +60,13 @@ async function run() {
       res.send(result);
     });
 
+    app.get('/instructor/class', async (req, res) => {
+      const cursor = await classes
+        .find({ instructorEmail: req.query.email })
+        .toArray();
+      res.send(cursor);
+    });
+
     app.get('/instructors', async (req, res) => {
       if (req.query?.limit) {
         const cursor = await instructors
@@ -84,6 +91,11 @@ async function run() {
         const result = await instructors.insertOne(instructor);
         res.send(result);
       }
+    });
+
+    app.get('/users', async (req, res) => {
+      const user = await users.findOne({ email: req.query.email });
+      res.send(user);
     });
 
     app.post('/users', async (req, res) => {
