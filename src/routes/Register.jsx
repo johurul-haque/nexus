@@ -40,6 +40,7 @@ const Register = () => {
             body: JSON.stringify({
               name: data.user,
               email: data.email,
+              role: 'student',
             }),
           });
           reset();
@@ -82,7 +83,7 @@ const Register = () => {
         <title>Nexus - Register</title>
       </Helmet>
 
-      <Animate className="mx-auto my-16 max-w-xs text-center text-gray-800">
+      <Animate className="container-padding mx-auto my-16 max-w-xs text-center text-gray-800">
         <h1 className="text-4xl font-bold">Register</h1>
         <p className="mb-7 mt-2">
           Greetings! We kindly request you to enter your details

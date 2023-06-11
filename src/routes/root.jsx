@@ -10,7 +10,16 @@ import Loading from '../components/Loading';
 import { AuthContext } from '../providers/Authenticate';
 
 const Root = () => {
-  const { loading } = useContext(AuthContext);
+  const { loading, user, setRole } = useContext(AuthContext);
+  useEffect(() => {
+    if (user) {
+      fetch(`${import.meta.env.VITE_SERVER}/users?email=${user.email}`)
+        .then((res) => res.json())
+        .then((data) => setRole(data.role));
+    } else {
+      setRole('student');
+    }
+  }, [user, setRole]);
   const pathname = useLocation();
 
   /*  window.addEventListener('load', () => {
@@ -18,7 +27,6 @@ const Root = () => {
     preloading.classList.add('opacity-0');
     preloading.setAttribute('aria-hidden', 'true');
   }); */
-
   useEffect(() => {
     scrollTo(0, 0);
   }, [pathname]);

@@ -37,9 +37,12 @@ const Student = () => {
       ) : (
         <div
           className={`my-6 grid grid-cols-[repeat(auto-fit,minmax(10rem,17rem))] gap-6 max-md:justify-center ${
-            data.length >= 3 && 'max-lg:justify-center'
+            data.length >= 2 && 'max-lg:justify-center'
           }`}
         >
+          <h2 className="col-span-full -mb-2 border-l-8 border-amber-400 pl-4 text-lg font-medium leading-snug">
+            Selected Class
+          </h2>
           {data?.map((item, idx) => (
             <article className={'flex flex-col border p-4'} key={idx}>
               <div className="relative">
@@ -92,7 +95,7 @@ const Student = () => {
               </dl>
               <div className="mt-auto flex w-full gap-2">
                 <Link
-                  to={`/payment?price=${item.price.toFixed(0)}`}
+                  to={`/payment`}
                   className="grid h-9 grow place-items-center bg-amber-300 text-center font-medium uppercase text-amber-800 outline-none ring-amber-300/80 ring-offset-2 transition-all duration-200 hover:bg-amber-400 focus-visible:ring-2"
                 >
                   Purchase

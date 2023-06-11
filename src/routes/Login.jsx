@@ -23,16 +23,6 @@ const Login = () => {
       .then((userCredential) => {
         setUser(userCredential.user);
         reset();
-        fetch(`${import.meta.env.VITE_SERVER}/users`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: userCredential.user.displayName,
-            email: userCredential.user.email,
-          }),
-        });
         setLoading(false);
       })
       .catch((error) => {
@@ -71,7 +61,7 @@ const Login = () => {
         <title>Login - Nexus</title>
       </Helmet>
 
-      <Animate className="mx-auto my-16 max-w-xs text-center text-gray-800">
+      <Animate className="container-padding mx-auto my-16 max-w-xs text-center text-gray-800">
         <h1 className="mb-7 text-4xl font-bold">Welcome back</h1>
         <form
           onSubmit={handleSubmit(login)}

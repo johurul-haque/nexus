@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
+import { useForm } from 'react-hook-form';
 
 import toast from 'react-hot-toast';
 import Animate from '../components/Animate';
@@ -28,6 +28,7 @@ const AddClass = () => {
         }),
         imgData = await res.json();
 
+      // eslint-disable-next-line no-unused-vars
       const postToServer = await fetch(
         `${import.meta.env.VITE_SERVER}/classes`,
         {
@@ -42,9 +43,13 @@ const AddClass = () => {
             instructorEmail: user.email,
             availableSeats: data.availableSeats,
             price: data.price,
+            status: 'pending',
+            enrolledStudents: 0,
+            feedback: null,
           }),
         }
       );
+      // eslint-disable-next-line no-unused-vars
       const addInstructor = await fetch(
         `${import.meta.env.VITE_SERVER}/instructors`,
         {

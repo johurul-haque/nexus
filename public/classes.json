@@ -6,7 +6,9 @@
     "instructorEmail": "michael@gmail.com",
     "availableSeats": 15,
     "price": 79.99,
-    "enrolledStudents": 12
+    "enrolledStudents": 12,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/drawing.webp",
@@ -15,7 +17,9 @@
     "instructorEmail": "david@gmail.com",
     "availableSeats": 0,
     "price": 69.99,
-    "enrolledStudents": 8
+    "enrolledStudents": 8,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/clear-webdesign.webp",
@@ -24,7 +28,9 @@
     "instructorEmail": "daniel@gmail.com",
     "availableSeats": 18,
     "price": 119.99,
-    "enrolledStudents": 15
+    "enrolledStudents": 15,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/color-table.webp",
@@ -33,7 +39,9 @@
     "instructorEmail": "alex@gmail.com",
     "availableSeats": 0,
     "price": 79.99,
-    "enrolledStudents": 14
+    "enrolledStudents": 14,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/creative-design-process.webp",
@@ -42,7 +50,9 @@
     "instructorEmail": "nathan@gmail.com",
     "availableSeats": 20,
     "price": 99.99,
-    "enrolledStudents": 18
+    "enrolledStudents": 18,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/banner-template.webp",
@@ -51,7 +61,9 @@
     "instructorEmail": "andrew@gmail.com",
     "availableSeats": 12,
     "price": 89.99,
-    "enrolledStudents": 10
+    "enrolledStudents": 10,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/graphic-design.webp",
@@ -60,7 +72,9 @@
     "instructorEmail": "michael@gmail.com",
     "availableSeats": 20,
     "price": 49.99,
-    "enrolledStudents": 15
+    "enrolledStudents": 15,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/drawing.webp",
@@ -69,7 +83,9 @@
     "instructorEmail": "david@gmail.com",
     "availableSeats": 15,
     "price": 79.99,
-    "enrolledStudents": 10
+    "enrolledStudents": 10,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/clear-webdesign.webp",
@@ -78,7 +94,9 @@
     "instructorEmail": "james@gmail.com",
     "availableSeats": 10,
     "price": 59.99,
-    "enrolledStudents": 8
+    "enrolledStudents": 8,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/banner-template.webp",
@@ -87,7 +105,9 @@
     "instructorEmail": "alex@gmail.com",
     "availableSeats": 12,
     "price": 99.99,
-    "enrolledStudents": 11
+    "enrolledStudents": 11,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/wooden-table.webp",
@@ -96,7 +116,9 @@
     "instructorEmail": "nathan@gmail.com",
     "availableSeats": 8,
     "price": 69.99,
-    "enrolledStudents": 6
+    "enrolledStudents": 6,
+    "status": "approved",
+    "feedback": null
   },
   {
     "image": "/images/color-table.webp",
@@ -105,6 +127,8 @@
     "instructorEmail": "daniel@gmail.com",
     "availableSeats": 18,
     "price": 89.99,
-    "enrolledStudents": 13
+    "enrolledStudents": 13,
+    "status": "approved",
+    "feedback": null
   }
 ]

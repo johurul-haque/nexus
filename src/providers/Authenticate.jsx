@@ -13,8 +13,9 @@ export const AuthContext = createContext(null);
 
 // eslint-disable-next-line react/prop-types
 const Authenticate = ({ children }) => {
-  const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true),
+    [user, setUser] = useState(null),
+    [role, setRole] = useState('student');
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -28,16 +29,28 @@ const Authenticate = ({ children }) => {
     signInWithPopup(auth, googleProvider)
       .then((userCredential) => {
         if (userCredential) {
-          fetch(`${import.meta.env.VITE_SERVER}/users`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: userCredential.user.displayName,
-              email: userCredential.user.email,
-            }),
-          });
+          const postUser = async () => {
+            await fetch(`${import.meta.env.VITE_SERVER}/users`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                name: userCredential.user.displayName,
+                email: userCredential.user.email,
+                role: 'student',
+              }),
+            });
+
+            await fetch(
+              `${import.meta.env.VITE_SERVER}/users?email=${
+                userCredential.user.email
+              }`
+            )
+              .then((res) => res.json())
+              .then((data) => setRole(data.role));
+          };
+          postUser();
         }
       })
       .catch((error) => console.error(error));
@@ -47,6 +60,7 @@ const Authenticate = ({ children }) => {
     onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+
     });
   }, []);
 
@@ -62,6 +76,8 @@ const Authenticate = ({ children }) => {
     signIn,
     popupLogin,
     logOut,
+    setRole,
+    role
   };
 
   return (
