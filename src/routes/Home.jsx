@@ -1,7 +1,7 @@
-import About from '../Layouts/About';
-import Classes from '../Layouts/Classes';
-import HeroSection from '../Layouts/HeroSection';
-import Instructors from '../Layouts/Instructors';
+import About from '../Layouts/home/About';
+import Classes from '../Layouts/home/Classes';
+import HeroSection from '../Layouts/home/HeroSection';
+import Instructors from '../Layouts/home/Instructors';
 import Animate from '../components/Animate';
 
 const Home = () => {

@@ -1,6 +1,6 @@
 import { Keyboard, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { design, sketch, sofa } from '../assets/images';
+import { design, sketch, sofa } from '../../assets/images';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

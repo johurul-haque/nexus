@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import AddClass from './AddClass';
 import Classes from './Classes';
 import Dashboard from './Dashboard';
 import ErrorPage from './ErrorPage';
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/payment',
         element: <Payment />,
+      },
+      {
+        path: '/classes/add',
+        element: <AddClass />,
       },
     ],
   },

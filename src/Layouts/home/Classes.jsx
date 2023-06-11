@@ -15,13 +15,15 @@ const Classes = () => {
       <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(8rem,18rem))] justify-center gap-5">
         {data.map((item, index) => (
           <article key={index} className="max-w-[18rem]">
-            <div className="relative bg-black">
+            <div className="relative bg-gray-950">
               <h3 className="absolute bottom-3 z-40 px-3 text-base font-medium leading-tight tracking-wide text-white">
                 {item.name}
               </h3>
               <img
-                className="relative aspect-video object-cover [mask-image:linear-gradient(#000_65%,transparent)]"
+                className="relative aspect-video bg-slate-200 object-cover [mask-image:linear-gradient(#000_63%,transparent)]"
                 src={item.image}
+                width={1920}
+                height={1080}
                 alt={item.name}
               />
             </div>

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-12">
           <div className="col-span-full lg:col-span-2 xl:pr-8">
             <Logo />
-            <p className="bg mt-4 text-base leading-relaxed text-fuchsia-950/90">
+            <p className="bg mt-4 text-justify text-base leading-relaxed text-fuchsia-950/90">
               Discover the top classes handpicked by our experts, featuring
               cutting-edge topics such as Advanced UI/UX Design, Motion Graphics
               Masterclass, Web Development Bootcamp, and more. Immerse yourself

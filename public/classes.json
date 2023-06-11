@@ -3,6 +3,7 @@
     "image": "/images/banner-template.webp",
     "name": "Advanced UI/UX Design",
     "instructor": "Michael Thompson",
+    "instructorEmail": "michael@gmail.com",
     "availableSeats": 15,
     "price": 79.99,
     "enrolledStudents": 12
@@ -11,6 +12,7 @@
     "image": "/images/drawing.webp",
     "name": "Motion Graphics Masterclass",
     "instructor": "David Reynolds",
+    "instructorEmail": "david@gmail.com",
     "availableSeats": 0,
     "price": 69.99,
     "enrolledStudents": 8
@@ -19,6 +21,7 @@
     "image": "/images/clear-webdesign.webp",
     "name": "Web Development Bootcamp",
     "instructor": "Daniel Reed",
+    "instructorEmail": "daniel@gmail.com",
     "availableSeats": 18,
     "price": 119.99,
     "enrolledStudents": 15
@@ -27,6 +30,7 @@
     "image": "/images/color-table.webp",
     "name": "Interior Design Principles",
     "instructor": "Alex Mitchell",
+    "instructorEmail": "alex@gmail.com",
     "availableSeats": 0,
     "price": 79.99,
     "enrolledStudents": 14
@@ -34,7 +38,8 @@
   {
     "image": "/images/creative-design-process.webp",
     "name": "Product Design Fundamentals",
-    "instructor": "William Turner",
+    "instructor": "Nathan Harris",
+    "instructorEmail": "nathan@gmail.com",
     "availableSeats": 20,
     "price": 99.99,
     "enrolledStudents": 18
@@ -42,7 +47,8 @@
   {
     "image": "/images/banner-template.webp",
     "name": "Graphic Design for Beginners",
-    "instructor": "Thomas Hughes",
+    "instructor": "Andrew Anderson",
+    "instructorEmail": "andrew@gmail.com",
     "availableSeats": 12,
     "price": 89.99,
     "enrolledStudents": 10
@@ -51,6 +57,7 @@
     "image": "/images/graphic-design.webp",
     "name": "Introduction to Graphic Design",
     "instructor": "Michael Thompson",
+    "instructorEmail": "michael@gmail.com",
     "availableSeats": 20,
     "price": 49.99,
     "enrolledStudents": 15
@@ -59,6 +66,7 @@
     "image": "/images/drawing.webp",
     "name": "Typography Fundamentals",
     "instructor": "David Reynolds",
+    "instructorEmail": "david@gmail.com",
     "availableSeats": 15,
     "price": 79.99,
     "enrolledStudents": 10
@@ -67,6 +75,7 @@
     "image": "/images/clear-webdesign.webp",
     "name": "Web Design for Beginners",
     "instructor": "James Clarke",
+    "instructorEmail": "james@gmail.com",
     "availableSeats": 10,
     "price": 59.99,
     "enrolledStudents": 8
@@ -75,6 +84,7 @@
     "image": "/images/banner-template.webp",
     "name": "User Experience Design",
     "instructor": "Alex Mitchell",
+    "instructorEmail": "alex@gmail.com",
     "availableSeats": 12,
     "price": 99.99,
     "enrolledStudents": 11
@@ -83,6 +93,7 @@
     "image": "/images/wooden-table.webp",
     "name": "Logo Design Workshop",
     "instructor": "Nathan Harris",
+    "instructorEmail": "nathan@gmail.com",
     "availableSeats": 8,
     "price": 69.99,
     "enrolledStudents": 6
@@ -91,6 +102,7 @@
     "image": "/images/color-table.webp",
     "name": "Digital Illustration Techniques",
     "instructor": "Daniel Reed",
+    "instructorEmail": "daniel@gmail.com",
     "availableSeats": 18,
     "price": 89.99,
     "enrolledStudents": 13

@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import * as React from 'react';
 import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Toaster } from 'react-hot-toast';
 import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -31,6 +32,7 @@ const Root = () => {
       {/* <Preloading /> */}
 
       <Header />
+      <Toaster />
 
       {loading ? (
         <div className="grid flex-1 place-items-center">

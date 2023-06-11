@@ -1,4 +1,4 @@
-import { sofa } from '../assets/images';
+import { sofa } from '../../assets/images';
 
 const About = () => {
   return (
@@ -52,8 +52,10 @@ const About = () => {
       </div>
       <img
         src={sofa}
-        alt=""
-        className="mx-auto aspect-[4/5] rounded-t-full object-cover object-left max-lg:-order-1 max-lg:max-w-[65ch]"
+        role="presentation"
+        className="mx-auto aspect-[4/5] w-full rounded-t-full object-cover object-left max-lg:-order-1 max-lg:max-w-[65ch]"
+        width={864}
+        height={1080}
       />
     </section>
   );
