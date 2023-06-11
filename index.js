@@ -54,6 +54,12 @@ async function run() {
       }
     });
 
+    app.post('/classes', async (req, res) => {
+      const classInfo = req.body,
+        result = await classes.insertOne(classInfo);
+      res.send(result);
+    });
+
     app.get('/instructors', async (req, res) => {
       if (req.query?.limit) {
         const cursor = await instructors
@@ -65,6 +71,18 @@ async function run() {
       } else {
         const cursor = await instructors.find({}).sort({ name: 1 }).toArray();
         res.send(cursor);
+      }
+    });
+
+    app.post('/instructors', async (req, res) => {
+      const instructor = req.body,
+        exists = await instructors.findOne({ email: instructor.email });
+
+      if (exists) {
+        res.send({ message: 'Instructor already exists' });
+      } else {
+        const result = await instructors.insertOne(instructor);
+        res.send(result);
       }
     });
 
