@@ -1,5 +1,5 @@
-import design from './sketch-to-design.webp';
-import sketch from './sketch.webp';
+import wall from './greenwall.webp';
+import room from './livingroom.webp';
 import sofa from './sofa.webp';
 
-export { sofa, sketch, design };
+export { sofa, room, wall };

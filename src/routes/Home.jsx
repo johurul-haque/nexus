@@ -6,14 +6,12 @@ import Animate from '../components/Animate';
 
 const Home = () => {
   return (
-    <Animate className="container-padding">
+    <Animate className="container-padding dark:bg-gray-900">
       <div className="mx-auto max-w-7xl">
         <HeroSection />
         <Classes />
         <Instructors />
         <About />
-
-        {/* TODO: Create an extra section with animation */}
       </div>
     </Animate>
   );

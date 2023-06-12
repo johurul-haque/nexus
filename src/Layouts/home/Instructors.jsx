@@ -8,7 +8,7 @@ const Instructors = () => {
       .then((data) => setData(data));
   }, []);
   return (
-    <section className="my-10">
+    <section className="my-10 dark:text-slate-400">
       <h2 className="text-center text-xl font-semibold lg:text-2xl">
         Top Instructors
       </h2>

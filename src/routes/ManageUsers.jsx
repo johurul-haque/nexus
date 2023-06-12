@@ -1,9 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import { useContext } from 'react';
-import { AuthContext } from '../providers/Authenticate';
+import { motion } from 'framer-motion';
 
 const ManageUsers = () => {
-  const { user } = useContext(AuthContext);
   const { data, isLoading, refetch } = useQuery({
     queryKey: ['getUsers'],
     queryFn: async () => {
@@ -29,6 +27,21 @@ const ManageUsers = () => {
       }
     };
     updateRole();
+  };
+
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i) => {
+      const delay = 0.5 + i * 0.5;
+      return {
+        pathLength: 1,
+        opacity: 1,
+        transition: {
+          pathLength: { delay, type: 'spring', duration: 2.5, bounce: 0 },
+          opacity: { delay, duration: 0.01 },
+        },
+      };
+    },
   };
 
   return (
@@ -103,20 +116,24 @@ const ManageUsers = () => {
                       {item.role}
                     </dd>
                     <dt className="flex justify-end gap-2 bg-gradient-to-r from-violet-600 from-50% to-fuchsia-500 bg-clip-text text-sm text-transparent">
-                      <svg
+                      <motion.svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
                         className="w-4 text-violet-500"
+                        initial="hidden"
+                        animate="visible"
                       >
-                        <path
+                        <motion.path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           d="M15 15l-6 6m0 0l-6-6m6 6V9a6 6 0 0112 0v3"
+                          variants={draw}
+                          custom={1}
                         />
-                      </svg>
+                      </motion.svg>
                       Change Role
                     </dt>
                   </div>

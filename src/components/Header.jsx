@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-fuchsia-200/50 bg-white py-2">
+    <header className="sticky top-0 z-50 border-b border-fuchsia-200/50 bg-white py-2 dark:border-gray-700/50 dark:bg-gray-900">
       <div className="container-padding mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
         <button
@@ -41,7 +41,7 @@ const Header = () => {
         <nav
           id="main-nav"
           aria-hidden="true"
-          className="right-6 top-6 grid origin-top-right items-center gap-x-7 rounded bg-white transition-all duration-200 max-sm:absolute max-sm:w-44 max-sm:scale-0 max-sm:p-6 max-sm:opacity-0 max-sm:shadow sm:flex lg:gap-x-10"
+          className="right-6 top-6 grid origin-top-right items-center gap-x-7 rounded bg-white transition-all duration-200 dark:bg-gray-900 dark:text-slate-500 max-sm:absolute max-sm:w-44 max-sm:scale-0 max-sm:p-6 max-sm:opacity-0 max-sm:shadow sm:flex lg:gap-x-10"
         >
           <button
             onClick={toggleMenu}
@@ -83,7 +83,7 @@ const Header = () => {
           {user ? (
             <>
               <button
-                className="rounded-full bg-slate-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 max-sm:mt-3"
+                className="rounded-full bg-slate-100 px-4 py-1 font-medium text-rose-700 outline-none ring-rose-500 ring-offset-2 ring-offset-transparent transition-all duration-200 hover:bg-rose-200 focus-visible:ring-1 dark:bg-slate-800 dark:text-rose-800 dark:hover:bg-rose-700/40 max-sm:mt-3"
                 onClick={() => {
                   logOut();
                   toggleMenu();

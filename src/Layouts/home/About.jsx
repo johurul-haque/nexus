@@ -2,7 +2,7 @@ import { sofa } from '../../assets/images';
 
 const About = () => {
   return (
-    <section className="my-10 grid gap-7 selection:bg-violet-200 selection:text-violet-900 lg:grid-cols-2">
+    <section className="grid gap-7 pb-10 selection:bg-violet-200 selection:text-violet-900 dark:text-slate-400 lg:grid-cols-2">
       <h2 className="-order-1 col-span-full text-xl font-semibold max-lg:text-center lg:text-2xl">
         About Us
       </h2>
