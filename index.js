@@ -142,6 +142,21 @@ async function run() {
       }
     });
 
+    app.patch('/users', async (req, res) => {
+      const { email, role } = req.body,
+        filter = { email: email },
+        result = await users.updateOne(
+          filter,
+          {
+            $set: {
+              role: role,
+            },
+          },
+          { upsert: true }
+        );
+      res.send(result);
+    });
+
     // TODO: Complete integrating payment method
 
     app.post('/create-payment-intent', async (req, res) => {
