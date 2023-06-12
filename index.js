@@ -46,10 +46,7 @@ async function run() {
           .toArray();
         res.send(cursor);
       } else {
-        const cursor = await classes
-          .find({})
-          .sort({ enrolledStudents: -1 })
-          .toArray();
+        const cursor = await classes.find({}).sort({ name: 1 }).toArray();
         res.send(cursor);
       }
     });
@@ -57,6 +54,36 @@ async function run() {
     app.post('/classes', async (req, res) => {
       const classInfo = req.body,
         result = await classes.insertOne(classInfo);
+      res.send(result);
+    });
+
+    app.patch('/classes', async (req, res) => {
+      const { status, id } = req.body,
+        filter = { _id: new ObjectId(id) },
+        result = await classes.updateOne(
+          filter,
+          {
+            $set: {
+              status: status,
+            },
+          },
+          { upsert: true }
+        );
+      res.send(result);
+    });
+
+    app.patch('/feedback', async (req, res) => {
+      const { feedback, id } = req.body,
+        filter = { _id: new ObjectId(id) },
+        result = await classes.updateOne(
+          filter,
+          {
+            $set: {
+              feedback: feedback,
+            },
+          },
+          { upsert: true }
+        );
       res.send(result);
     });
 
@@ -94,8 +121,13 @@ async function run() {
     });
 
     app.get('/users', async (req, res) => {
-      const user = await users.findOne({ email: req.query.email });
-      res.send(user);
+      if (req.query?.email) {
+        const user = await users.findOne({ email: req.query.email });
+        res.send(user);
+      } else {
+        const user = await users.find({}).toArray();
+        res.send(user);
+      }
     });
 
     app.post('/users', async (req, res) => {
