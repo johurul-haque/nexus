@@ -38,6 +38,7 @@ const Authenticate = ({ children }) => {
               body: JSON.stringify({
                 name: userCredential.user.displayName,
                 email: userCredential.user.email,
+                photo: userCredential.user.photoURL,
                 role: 'student',
               }),
             });

@@ -8,14 +8,15 @@ import { AuthContext } from '../providers/Authenticate';
 
 const Dashboard = () => {
   const { role } = useContext(AuthContext);
+  console.log(role);
   return (
     <>
       <Helmet>
         <title>Dashboard - Nexus</title>
       </Helmet>
 
-      <Animate className="mx-auto mb-10 mt-7">
-        <div className="container-padding max-w-7xl">
+      <Animate className="container-padding  mb-10 mt-7">
+        <div className="mx-auto max-w-7xl">
           <h1 className="text-center text-2xl font-medium text-fuchsia-950 lg:text-3xl lg:font-semibold">
             Dashboard
           </h1>

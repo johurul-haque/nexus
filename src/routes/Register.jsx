@@ -40,6 +40,7 @@ const Register = () => {
             body: JSON.stringify({
               name: data.user,
               email: data.email,
+              photo: data.profile,
               role: 'student',
             }),
           });
