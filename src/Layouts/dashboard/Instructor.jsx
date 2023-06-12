@@ -67,7 +67,7 @@ const Instructor = () => {
                   {item.name}
                 </h2>
 
-                <dl className="grid grid-cols-2 text-sm">
+                <dl className="grid grid-cols-[2fr,1fr] text-sm">
                   <dt className="sr-only">Instructor</dt>
                   <dd className="flex items-center gap-1">
                     <svg
@@ -127,6 +127,7 @@ const Instructor = () => {
                     {item.enrolledStudents}
                   </dd>
                 </dl>
+                {/* TODO: Add feedback menu */}
               </article>
             ))}
           </div>

@@ -62,7 +62,7 @@
     "availableSeats": 12,
     "price": 89.99,
     "enrolledStudents": 10,
-    "status": "approved",
+    "status": "pending",
     "feedback": null
   },
   {
@@ -73,7 +73,7 @@
     "availableSeats": 20,
     "price": 49.99,
     "enrolledStudents": 15,
-    "status": "approved",
+    "status": "pending",
     "feedback": null
   },
   {
@@ -84,7 +84,7 @@
     "availableSeats": 15,
     "price": 79.99,
     "enrolledStudents": 10,
-    "status": "approved",
+    "status": "pending",
     "feedback": null
   },
   {
@@ -106,7 +106,7 @@
     "availableSeats": 12,
     "price": 99.99,
     "enrolledStudents": 11,
-    "status": "approved",
+    "status": "declined",
     "feedback": null
   },
   {
@@ -128,7 +128,7 @@
     "availableSeats": 18,
     "price": 89.99,
     "enrolledStudents": 13,
-    "status": "approved",
+    "status": "declined",
     "feedback": null
   }
 ]

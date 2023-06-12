@@ -14,17 +14,19 @@ const Dashboard = () => {
         <title>Dashboard - Nexus</title>
       </Helmet>
 
-      <Animate className="container-padding mx-auto mb-10 mt-7 max-w-7xl">
-        <h1 className="text-center text-2xl font-medium text-fuchsia-950 lg:text-3xl lg:font-semibold">
-          Dashboard
-        </h1>
-        {role == 'admin' ? (
-          <Admin />
-        ) : role == 'instructor' ? (
-          <Instructor />
-        ) : (
-          <Student />
-        )}
+      <Animate className="mx-auto mb-10 mt-7">
+        <div className="container-padding max-w-7xl">
+          <h1 className="text-center text-2xl font-medium text-fuchsia-950 lg:text-3xl lg:font-semibold">
+            Dashboard
+          </h1>
+          {role == 'admin' ? (
+            <Admin />
+          ) : role == 'instructor' ? (
+            <Instructor />
+          ) : (
+            <Student />
+          )}
+        </div>
       </Animate>
     </>
   );

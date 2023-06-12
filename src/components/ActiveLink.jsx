@@ -7,6 +7,7 @@ export const ActiveLink = ({ to, title }) => {
   return (
     <NavLink
       to={to}
+      end
       className={({ isActive }) =>
         (isActive
           ? `bg-gradient-to-r from-violet-600 from-50% to-fuchsia-500 bg-clip-text text-transparent`
