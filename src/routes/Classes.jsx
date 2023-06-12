@@ -78,10 +78,10 @@ const Classes = () => {
               (item, idx) =>
                 item.status == 'approved' && (
                   <article
-                    className={`flex flex-col p-4 ${
+                    className={`flex flex-col p-3 ${
                       item.availableSeats
                         ? 'border'
-                        : 'bg-rose-300 text-rose-950'
+                        : 'border border-rose-300 bg-rose-300 text-rose-950'
                     }`}
                     key={idx}
                   >
