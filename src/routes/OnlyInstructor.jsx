@@ -3,17 +3,14 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../providers/Authenticate';
 
 // eslint-disable-next-line react/prop-types
-const Private = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+const OnlyInstructor = ({ children }) => {
+  const { role } = useContext(AuthContext);
   let location = useLocation();
 
-  if (loading) {
-    return;
-  }
-
-  if (user) {
+  if (role === 'instructor') {
     return children;
   }
-  return <Navigate to={'/signin'} state={{ from: location }} replace />;
+
+  return <Navigate to={'/dashboard'} state={{ from: location }} replace />;
 };
-export default Private;
+export default OnlyInstructor;

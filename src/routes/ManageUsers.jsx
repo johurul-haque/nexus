@@ -45,8 +45,8 @@ const ManageUsers = () => {
             >
               <img
                 className="row-span-full aspect-square w-16 rounded-full object-cover"
-                src="/wheeltopia.jpg"
-                alt=""
+                src={item.photo}
+                alt={item.name}
               />
               <div className="grow">
                 <figcaption>{item.name}</figcaption>

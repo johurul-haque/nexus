@@ -8,7 +8,6 @@ import { AuthContext } from '../providers/Authenticate';
 
 const Dashboard = () => {
   const { role } = useContext(AuthContext);
-  console.log(role);
   return (
     <>
       <Helmet>

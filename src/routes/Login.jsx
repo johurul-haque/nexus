@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Animate from '../components/Animate';
 
 import google from '../assets/svg/google.svg';
@@ -15,7 +15,9 @@ const Login = () => {
   const [loading, setLoading] = useState(false),
     [showPass, setShowPass] = useState(true),
     [error, setError] = useState(null),
-    [emailError, setEmailError] = useState(null);
+    [emailError, setEmailError] = useState(null),
+    from = useLocation().state?.from?.pathname || '/',
+    navigate = useNavigate();
 
   const login = (data) => {
     setLoading(true);
@@ -24,6 +26,7 @@ const Login = () => {
         setUser(userCredential.user);
         reset();
         setLoading(false);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setLoading(false);

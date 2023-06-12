@@ -8,7 +8,9 @@ import Instructors from './Instructors';
 import Login from './Login';
 import ManageClasses from './ManageClasses';
 import ManageUsers from './ManageUsers';
+import OnlyInstructor from './OnlyInstructor';
 import Payment from './Payment';
+import Private from './Private';
 import Register from './Register';
 import Root from './root';
 
@@ -40,7 +42,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard />,
+        element: (
+          <Private>
+            <Dashboard />
+          </Private>
+        ),
         children: [
           {
             path: 'manage/users',
@@ -57,8 +63,12 @@ const router = createBrowserRouter([
         element: <Payment />,
       },
       {
-        path: '/classes/add',
-        element: <AddClass />,
+        path: '/dashboard/manage/class',
+        element: (
+          <OnlyInstructor>
+            <AddClass />
+          </OnlyInstructor>
+        ),
       },
     ],
   },
