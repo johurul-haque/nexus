@@ -6,7 +6,7 @@ import Animate from '../components/Animate';
 
 const Home = () => {
   return (
-    <Animate className="container-padding dark:bg-gray-900">
+    <Animate className="container-padding">
       <div className="mx-auto max-w-7xl">
         <HeroSection />
         <Classes />

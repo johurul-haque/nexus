@@ -2,7 +2,7 @@ import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="container-padding w-full bg-fuchsia-100/80 py-7 selection:bg-fuchsia-300/60 selection:text-fuchsia-900 dark:bg-violet-900/25 md:py-10 md:pt-14">
+    <footer className="container-padding w-full bg-fuchsia-100/80 py-7 selection:bg-fuchsia-300/60 selection:text-fuchsia-900 md:py-10 md:pt-14">
       <div className="mx-auto max-w-7xl tracking-wide text-fuchsia-950">
         <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-12">
           <div className="col-span-full lg:col-span-2 xl:pr-8">

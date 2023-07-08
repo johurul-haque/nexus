@@ -8,7 +8,7 @@ const Classes = () => {
       .then((data) => setData(data));
   }, []);
   return (
-    <section className="my-7 dark:text-slate-400">
+    <section className="my-7">
       <h2 className="text-center text-xl font-semibold lg:text-2xl">
         Popular Classes
       </h2>
