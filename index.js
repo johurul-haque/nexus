@@ -27,7 +27,8 @@ async function run() {
     const database = client.db('nexus'),
       classes = database.collection('classes'),
       instructors = database.collection('instructors'),
-      users = database.collection('users');
+      users = database.collection('users'),
+      payments = database.collection('payments');
 
     app.get('/', (req, res) => {
       res.send(`<main>
@@ -159,17 +160,26 @@ async function run() {
 
     // TODO: Complete integrating payment method
 
-    app.post('/create-payment-intent', async (req, res) => {
-      const { price } = req.body,
-        amount = price * 100,
+    app.get('/create-payment-intent/:id', async (req, res) => {
+      const exactClass = await classes.findOne({
+          _id: new ObjectId(req.params.id),
+        }),
+        amount = parseInt(exactClass.price) * 100,
         paymentIntent = await stripe.paymentIntents.create({
           amount: amount,
           currency: 'usd',
           payment_method_types: ['card'],
         });
+
       res.send({
         clientSecret: paymentIntent.client_secret,
+        idOfTheClass: req.params.id,
       });
+    });
+
+    app.post('/payments', async (req, res) => {
+      const result = await payments.insertOne(req.body);
+      res.send(result);
     });
 
     await client.db('admin').command({ ping: 1 });
