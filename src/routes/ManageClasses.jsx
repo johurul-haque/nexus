@@ -91,6 +91,7 @@ const ManageClasses = () => {
 
     if (res) {
       reset();
+      refetch();
     }
   };
 

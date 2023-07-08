@@ -59,8 +59,12 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: '/payment',
+        path: '/payment/:id',
         element: <Payment />,
+        loader: ({ params }) =>
+          fetch(
+            `${import.meta.env.VITE_SERVER}/create-payment-intent/${params.id}`
+          ),
       },
       {
         path: '/dashboard/manage/class',

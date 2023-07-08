@@ -15,9 +15,8 @@ export const AuthContext = createContext(null);
 const Authenticate = ({ children }) => {
   const [loading, setLoading] = useState(true),
     [user, setUser] = useState(null),
-    [role, setRole] = useState('student');
-
-  const googleProvider = new GoogleAuthProvider();
+    [role, setRole] = useState('student'),
+    googleProvider = new GoogleAuthProvider();
 
   const createUser = (email, password) =>
     createUserWithEmailAndPassword(auth, email, password);
@@ -61,7 +60,6 @@ const Authenticate = ({ children }) => {
     onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       setLoading(false);
-
     });
   }, []);
 
@@ -78,7 +76,7 @@ const Authenticate = ({ children }) => {
     popupLogin,
     logOut,
     setRole,
-    role
+    role,
   };
 
   return (

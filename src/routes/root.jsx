@@ -22,11 +22,6 @@ const Root = () => {
   }, [user, setRole]);
   const pathname = useLocation();
 
-  /*  window.addEventListener('load', () => {
-    const preloading = document.querySelector('#preloading');
-    preloading.classList.add('opacity-0');
-    preloading.setAttribute('aria-hidden', 'true');
-  }); */
   useEffect(() => {
     scrollTo(0, 0);
   }, [pathname]);
@@ -36,8 +31,6 @@ const Root = () => {
       <Helmet>
         <title>Design Nexus</title>
       </Helmet>
-
-      {/* <Preloading /> */}
 
       <Header />
       <Toaster />

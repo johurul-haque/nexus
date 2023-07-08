@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Classes as Skeleton } from '../../components/Skeleton';
 
 const Student = () => {
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [count, setCount] = useState(true);
@@ -95,7 +96,7 @@ const Student = () => {
               </dl>
               <div className="mt-auto flex w-full gap-2">
                 <Link
-                  to={`/payment`}
+                  to={`/payment/${item._id}`}
                   className="grid h-9 grow place-items-center bg-amber-300 text-center font-medium uppercase text-amber-800 outline-none ring-amber-300/80 ring-offset-2 transition-all duration-200 hover:bg-amber-400 focus-visible:ring-2"
                 >
                   Purchase
