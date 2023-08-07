@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 const HeroSection = () => {
   return (
-    <section className="max-sm:-mx-4">
+    <section className="mx-auto max-w-7xl max-sm:-mx-4">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -81,7 +81,7 @@ const HeroSection = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <h1 className="mt-3 text-xl font-semibold tracking-wide text-violet-700 max-sm:px-4 sm:text-2xl">
+      <h1 className="mt-5 text-center font-serif text-xl font-bold uppercase text-gray-950 [text-wrap:balance] max-sm:px-4 sm:text-4xl">
         Elevate Your Design Skills to New Heights.
       </h1>
     </section>

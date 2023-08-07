@@ -5,6 +5,7 @@ const Logo = () => {
   return (
     <Link
       to={'/'}
+      title="Design Nexus Home"
       className="ring-outline flex max-w-fit items-center gap-2 rounded-sm text-lg font-semibold sm:text-xl"
     >
       <img

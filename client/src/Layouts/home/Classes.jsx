@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 const Classes = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_SERVER}/classes?limit=6`)
+    fetch(`${import.meta.env.VITE_SERVER}/classes?limit=8`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
   return (
-    <section className="my-7">
+    <section className="mx-auto max-w-7xl py-7 sm:py-10 md:py-16">
       <h2 className="text-center text-xl font-semibold lg:text-2xl">
         Popular Classes
       </h2>
-      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(8rem,18rem))] justify-center gap-5">
+      <div className="mt-8 grid grid-cols-[repeat(auto-fill,minmax(8rem,18rem))] justify-center gap-5">
         {data.map((item, index) => (
           <article key={index} className="max-w-[18rem]">
             <div className="relative bg-gray-950">

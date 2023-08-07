@@ -76,6 +76,10 @@
     height: 100%;
   }
 
+  body {
+    @apply selection:bg-violet-200 selection:text-violet-900;
+  }
+
   input[type='search']::-webkit-search-decoration,
   input[type='search']::-webkit-search-cancel-button,
   input[type='search']::-webkit-search-results-button,
@@ -304,5 +308,13 @@
 
   .ring-outline {
     @apply outline-none ring-fuchsia-500 ring-offset-2 transition-all duration-200 focus-visible:ring-1;
+  }
+
+  .mySwiper [class^="swiper-button-"]::after {
+    @apply text-black text-4xl opacity-80;
+  }
+
+  .testimonial [class^="swiper-button-"]::after {
+    @apply text-3xl;
   }
 }

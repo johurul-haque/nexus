@@ -75,7 +75,7 @@ const Classes = () => {
         ) : (
           <div className="my-6 grid grid-cols-[repeat(auto-fit,minmax(10rem,17rem))] justify-center gap-6">
             {data.map(
-              (item, idx) =>
+              (item) =>
                 item.status == 'approved' && (
                   <article
                     className={`flex flex-col p-3 ${
@@ -83,7 +83,8 @@ const Classes = () => {
                         ? 'border'
                         : 'border border-rose-300 bg-rose-300 text-rose-950'
                     }`}
-                    key={idx}
+                    key={item._id}
+                    id={item._id}
                   >
                     <div className="relative">
                       <img

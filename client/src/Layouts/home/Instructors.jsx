@@ -8,11 +8,11 @@ const Instructors = () => {
       .then((data) => setData(data));
   }, []);
   return (
-    <section className="my-10">
+    <section className="mx-auto max-w-7xl py-4">
       <h2 className="text-center text-xl font-semibold lg:text-2xl">
         Top Instructors
       </h2>
-      <div className="mt-5 flex flex-wrap justify-center gap-10">
+      <div className="mt-10 flex flex-wrap justify-center gap-10">
         {data.map((item, idx) => (
           <figure key={idx} className="grid justify-center text-center">
             <img
