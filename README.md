@@ -16,7 +16,11 @@ Design Nexus is an innovative online design school that offers a wide range of c
 
 - **TailwindCSS**: A highly customizable CSS framework that allows for rapid and responsive UI development.
 
+- **Radix UI**: Completely unstyled, fully accessible UI components. Used for adding accordion in the FAQ section.
+
 - **Headless UI**: Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
+
+- **Swiper JS**: A library for pre-built carousel. Used it for creating the testimonials card and the hero section. 
 
 - **Framer Motion**: A library for creating smooth and interactive animations in React applications, adding delightful visual effects to your user interfaces.
 
@@ -29,8 +33,4 @@ Design Nexus is an innovative online design school that offers a wide range of c
 ## Support
 
 If you have any questions or feedback, please reach out to my [linkedin](https://www.linkedin.com/in/johurul-haque/).
-
-## License
-
-This project is licensed under the MIT License.
 
