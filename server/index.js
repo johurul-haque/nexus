@@ -41,13 +41,16 @@ async function run() {
     app.get('/classes', async (req, res) => {
       if (req.query?.limit) {
         const cursor = await classes
-          .find({})
+          .find({status: 'approved'})
           .limit(parseInt(req.query.limit))
           .sort({ enrolledStudents: -1 })
           .toArray();
         res.send(cursor);
       } else {
-        const cursor = await classes.find({}).sort({ name: 1 }).toArray();
+        const cursor = await classes
+          .find({ status: 'approved' })
+          .sort({ name: 1 })
+          .toArray();
         res.send(cursor);
       }
     });
