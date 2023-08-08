@@ -5,7 +5,7 @@ const Loading = ({
   text = 'text-fuchsia-200/80',
 }) => {
   return (
-    <div role="status" className="my-36">
+    <div role="status" className="my-28">
       <svg
         aria-hidden="true"
         className={`aspect-square ${width} animate-spin ${fill} ${text}`}
