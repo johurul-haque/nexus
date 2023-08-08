@@ -14,7 +14,7 @@ const Logo = () => {
         title="Design Nexus"
         className="aspect-square w-14 object-contain text-xs font-light"
       />
-      <span className="bg-gradient-to-br from-violet-600 from-0% via-fuchsia-500 via-60% to-fuchsia-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-br from-violet-600 from-0% via-fuchsia-500 via-60% to-fuchsia-400 bg-clip-text uppercase text-transparent">
         NEXUS
       </span>
     </Link>

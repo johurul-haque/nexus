@@ -1,6 +1,6 @@
 const BeInstructor = () => {
   return (
-    <section className="mx-auto grid max-w-fit items-center gap-x-20 gap-y-8 py-7 sm:py-10 md:grid-cols-2 lg:py-16">
+    <section className="mx-auto grid max-w-fit items-center gap-x-20 gap-y-8 py-7 sm:py-12 md:grid-cols-2 lg:py-16">
       <img
         src="/images/beInstructor.jpg"
         alt="A person standing up trying to explain something"

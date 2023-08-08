@@ -1,4 +1,4 @@
-import { Keyboard, Navigation, Pagination } from 'swiper';
+import { Keyboard, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { room, sofa, wall } from '../../assets/images';
 
@@ -15,11 +15,8 @@ const HeroSection = () => {
         keyboard={{
           enabled: true,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
+        modules={[Keyboard, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide className="relative">
@@ -81,7 +78,7 @@ const HeroSection = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <h1 className="mt-5 text-center font-serif text-xl font-bold uppercase text-gray-950 [text-wrap:balance] max-sm:px-4 sm:text-4xl">
+      <h1 className="mt-5 text-center font-serif text-xl font-bold uppercase text-gray-800 [text-shadow:3px_3px_rgb(221_214_254)] [text-wrap:balance] max-sm:px-4 sm:text-4xl">
         Elevate Your Design Skills to New Heights.
       </h1>
     </section>

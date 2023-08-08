@@ -3,8 +3,8 @@ import { ChevronDown } from 'lucide-react';
 
 const Faq = () => {
   return (
-    <section className="mx-auto grid max-w-7xl items-center py-7 sm:py-10 md:grid-cols-[1fr_30rem] lg:py-16">
-      <h2 className="space-x-7 self-center text-center font-serif text-[12rem] font-bold">
+    <section className="mx-auto grid max-w-7xl items-center gap-x-4 py-14 sm:py-16 md:grid-cols-[1fr_30rem] lg:py-20">
+      <h2 className="space-x-5 self-center text-center font-serif text-[20vw] font-bold min-[300px]:space-x-7 sm:text-[17vw] md:text-[8vw] lg:text-[12vw] xl:text-[12rem]">
         <span className="inline-block animate-bounce">F</span>
         <span className="inline-block animate-bounce [animation-delay:2ms]">
           A
@@ -12,13 +12,13 @@ const Faq = () => {
         <span className="inline-block animate-bounce">Q</span>
       </h2>
 
-      <Accordion.Root className="max-w-md" collapsible>
+      <Accordion.Root className="max-w-md max-md:mx-auto" collapsible>
         <Accordion.Item value="item-1" className="border-b">
-          <Accordion.Trigger className="group flex w-full justify-between py-4 text-left">
+          <Accordion.Trigger className="group flex w-full justify-between gap-x-6 py-4 text-left">
             Who can enroll in the classes?
             <ChevronDown
               strokeWidth={1.8}
-              className="transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
+              className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
             />
           </Accordion.Trigger>
 
@@ -32,11 +32,11 @@ const Faq = () => {
           </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="item-2" className="border-b">
-          <Accordion.Trigger className="group flex w-full justify-between py-3 text-left">
+          <Accordion.Trigger className="group flex w-full justify-between gap-x-6 py-3 text-left">
             How do I enroll in a class?
             <ChevronDown
               strokeWidth={1.8}
-              className="transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
+              className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
             />
           </Accordion.Trigger>
 
@@ -51,11 +51,11 @@ const Faq = () => {
           </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="item-3" className="border-b">
-          <Accordion.Trigger className="group flex w-full justify-between py-3 text-left">
+          <Accordion.Trigger className="group flex w-full justify-between gap-x-6 py-3 text-left">
             Are the classes self-paced?
             <ChevronDown
               strokeWidth={1.8}
-              className="transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
+              className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
             />
           </Accordion.Trigger>
 
@@ -68,11 +68,11 @@ const Faq = () => {
           </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="item-4" className="border-b">
-          <Accordion.Trigger className="group flex w-full justify-between py-3 text-left">
+          <Accordion.Trigger className="group flex w-full justify-between gap-x-6 py-3 text-left">
             What if I have technical issues during the course?
             <ChevronDown
               strokeWidth={1.8}
-              className="transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
+              className="shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
             />
           </Accordion.Trigger>
 
