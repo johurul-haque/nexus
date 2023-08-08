@@ -41,7 +41,7 @@ const Header = () => {
         <nav
           id="main-nav"
           aria-hidden="true"
-          className="right-6 top-6 grid origin-top-right items-center gap-x-7 rounded transition-all duration-200 max-md:absolute max-md:w-44 max-md:scale-0 max-md:p-6 max-md:opacity-0 max-md:shadow md:flex lg:gap-x-10"
+          className="right-6 top-6 grid origin-top-right items-center gap-x-7 rounded transition-all duration-200 max-md:absolute max-md:w-44 max-md:scale-0 max-md:bg-slate-50 max-md:p-6 max-md:opacity-0 max-md:shadow md:flex lg:gap-x-10"
         >
           <button
             onClick={toggleMenu}

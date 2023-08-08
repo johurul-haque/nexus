@@ -49,14 +49,15 @@ const Testimonial = () => {
             </div>
             <figure>
               <img
-                src={'/images/instructor-9.webp'}
+                src={'/images/instructor-2.webp'}
                 width={1920}
                 height={1080}
                 className="mx-auto h-32 w-32 rounded-full object-cover object-top"
+                alt="Picture of Akagami Shanks"
               />
               <figcaption className="text-center">
                 <h3 className="mt-4 text-lg font-medium leading-snug">
-                  Ismaeel Ameen
+                  Akagami Shanks
                 </h3>
                 <p className="text-gray-700">Head of Data Engineering</p>
                 <div className="mt-2">
@@ -93,14 +94,15 @@ const Testimonial = () => {
             </div>
             <figure>
               <img
-                src={'/images/instructor-2.webp'}
+                src={'/images/instructor-9.webp'}
                 width={1920}
                 height={1080}
                 className="mx-auto h-32 w-32 rounded-full object-cover object-center"
+                alt="Picture of Ismaeel Ameen"
               />
               <figcaption className="text-center">
                 <h3 className="mt-4 text-lg font-medium leading-snug">
-                  John Doe
+                  Ismaeel Ameen
                 </h3>
                 <p className="text-gray-700">The Tech Lead</p>
                 <div className="mt-2">
