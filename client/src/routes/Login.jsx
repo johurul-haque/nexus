@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ import Loading from '../components/Loading';
 import { AuthContext } from '../providers/Authenticate';
 
 const Login = () => {
-  const { signIn, setUser, popupLogin } = useContext(AuthContext);
+  const { signIn, user, setUser, popupLogin } = useContext(AuthContext);
 
   const { register, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false),
@@ -26,7 +26,6 @@ const Login = () => {
         setUser(userCredential.user);
         reset();
         setLoading(false);
-        navigate(from, { replace: true });
       })
       .catch((error) => {
         setLoading(false);
@@ -57,6 +56,12 @@ const Login = () => {
     document.getElementById('password').setAttribute('type', 'password');
     setShowPass(true);
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user, from, navigate]);
 
   return (
     <>

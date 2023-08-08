@@ -52,16 +52,16 @@ const Testimonial = () => {
                 src={'/images/instructor-2.webp'}
                 width={1920}
                 height={1080}
-                className="mx-auto h-32 w-32 rounded-full object-cover object-top"
+                className="mx-auto h-32 w-32 rounded-full object-cover object-center"
                 alt="Picture of Akagami Shanks"
               />
               <figcaption className="text-center">
                 <h3 className="mt-4 text-lg font-medium leading-snug">
                   Akagami Shanks
                 </h3>
-                <p className="text-gray-700">Head of Data Engineering</p>
+                <p className="text-gray-700">The Tech Lead</p>
                 <div className="mt-2">
-                  <span className="sr-only">Company</span> Robert Walters
+                  <span className="sr-only">Company</span> Red Hair
                 </div>
               </figcaption>
             </figure>
@@ -97,14 +97,14 @@ const Testimonial = () => {
                 src={'/images/instructor-9.webp'}
                 width={1920}
                 height={1080}
-                className="mx-auto h-32 w-32 rounded-full object-cover object-center"
+                className="mx-auto h-32 w-32 rounded-full object-cover object-top"
                 alt="Picture of Ismaeel Ameen"
               />
               <figcaption className="text-center">
                 <h3 className="mt-4 text-lg font-medium leading-snug">
                   Ismaeel Ameen
                 </h3>
-                <p className="text-gray-700">The Tech Lead</p>
+                <p className="text-gray-700">Head of Data Engineering</p>
                 <div className="mt-2">
                   <span className="sr-only">Company</span> Wellfound
                 </div>

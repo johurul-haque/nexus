@@ -1,5 +1,5 @@
 import { updateProfile } from 'firebase/auth';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import Animate from '../components/Animate';
@@ -10,7 +10,7 @@ import Loading from '../components/Loading';
 import { AuthContext } from '../providers/Authenticate';
 
 const Register = () => {
-  const { createUser, auth, popupLogin } = useContext(AuthContext);
+  const { user, createUser, auth, popupLogin } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -48,7 +48,6 @@ const Register = () => {
           });
           reset();
           setLoading(false);
-          navigate(from, { replace: true });
         })
         .catch((error) => console.error(error.message));
     } else {
@@ -80,6 +79,12 @@ const Register = () => {
     document.getElementById('confirmPassword').setAttribute('type', 'password');
     setConfirmPassShow(true);
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user, from, navigate]);
 
   return (
     <>
