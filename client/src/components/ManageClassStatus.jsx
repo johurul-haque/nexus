@@ -15,7 +15,7 @@ const ManageClassStatus = ({ item, decline, approve, feedback }) => {
             className={`absolute bottom-2 right-2 rounded-full text-center ${
               item.availableSeats
                 ? 'bg-violet-200/90 text-violet-900'
-                : 'animate-bounce bg-rose-600/90 text-white'
+                : 'bg-rose-600/90 text-white'
             }  px-2 py-1 text-xs `}
           >
             {item.availableSeats
