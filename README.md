@@ -1,6 +1,6 @@
 # Design Nexus
 
-Design Nexus is an innovative online design school that offers a wide range of classes to help individuals enhance their design skills and unleash their creativity. With a focus on modern technologies and industry-standard practices, we strive to provide an immersive learning experience for aspiring designers of all levels.
+Design Nexus is a beautifully designed online learning management system (LMS). 
 
 [Visit Live](https://designnexus.vercel.app/)
 
@@ -23,12 +23,6 @@ Design Nexus is an innovative online design school that offers a wide range of c
 - **Swiper JS**: A library for pre-built carousel. Used it for creating the testimonials card and the hero section. 
 
 - **Framer Motion**: A library for creating smooth and interactive animations in React applications, adding delightful visual effects to your user interfaces.
-
-## Features
-
-- **Diverse Class Selection**: Explore our extensive catalog of design classes, covering a wide range of topics such as UI/UX design, motion graphics, web development, and more.
-
-- **Experienced Instructors**: Learn from industry professionals and experienced designers who are passionate about sharing their knowledge and expertise.
 
 ## Support
 
