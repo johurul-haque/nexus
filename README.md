@@ -8,6 +8,7 @@ Design Nexus is a beautifully designed online learning management system (LMS) w
 **Admin**
 - Email: `admin@johurul.com`
 - Password: `Test$ng`
+
 **Instructor**
 - Email: `instructor@johurul.com`
 - Password: `In$tructor`
