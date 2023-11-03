@@ -1,30 +1,36 @@
 # Design Nexus
 
-Design Nexus is a beautifully designed online learning management system (LMS). 
+Design Nexus is a beautifully designed online learning management system (LMS) with authentication and role-based authorization. Similar to something like Udemy or SkillShare.
 
 [Visit Live](https://designnexus.vercel.app/)
 
+## Credentials
+**Admin**
+- Email: `admin@johurul.com`
+- Password: `Test$ng`
+**Instructor**
+- Email: `instructor@johurul.com`
+- Password: `In$tructor`
+
 ## Technologies Used
 
-- **React**: A popular JavaScript library for building user interfaces with reusable components and efficient rendering.
+- **React**: For building user interfaces and reusable components.
 
-- **Firebase**: A comprehensive platform for building web and mobile applications, providing hosting, real-time database, authentication, and more.
+- **Firebase**: For managing authentication.
 
-- **React Router**: A routing library for React applications, enabling seamless navigation between different pages and components.
+- **React Router**: For handling routing between pages.
   
-- **Tanstack - Query**: Efficient and powerful JavaScript library for DOM manipulation and event handling.
+- **Tanstack Query**: Used for its easy data fetching and caching architecture.
 
-- **TailwindCSS**: A highly customizable CSS framework that allows for rapid and responsive UI development.
+- **Tailwind CSS**: Used for designing the whole site.
 
 - **Radix UI**: Completely unstyled, fully accessible UI components. Used for adding accordion in the FAQ section.
 
-- **Headless UI**: Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
+- **Swiper JS**: Used it for creating the testimonials card and the hero sections carousel. 
 
-- **Swiper JS**: A library for pre-built carousel. Used it for creating the testimonials card and the hero section. 
-
-- **Framer Motion**: A library for creating smooth and interactive animations in React applications, adding delightful visual effects to your user interfaces.
+- **Framer Motion**: Used for page transitions and subtle animation in the admin dashboard.
 
 ## Support
 
-If you have any questions or feedback, please reach out to my [linkedin](https://www.linkedin.com/in/johurul-haque/).
+If you have any questions or feedback reach out to my [linkedin](https://www.linkedin.com/in/johurul-haque/).
 
