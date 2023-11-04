@@ -19,7 +19,7 @@ Design Nexus is a beautifully designed online learning management system (LMS) w
 
 - **Firebase**: For managing authentication.
 
-- **React Router**: For handling routing between pages.
+- **React Router**: For client side routing.
   
 - **Tanstack Query**: Used for its easy data fetching and caching architecture.
 
