@@ -1,6 +1,6 @@
 # Design Nexus
 
-Design Nexus is a beautifully designed online learning management system (LMS) with authentication and role-based authorization. Similar to something like Udemy or SkillShare.
+Design Nexus is a beautifully designed course-selling platform with user authentication, role-based authorization, and secure payment transactions using Stripe.
 
 [Visit Live](https://designnexus.vercel.app/)
 
@@ -13,23 +13,24 @@ Design Nexus is a beautifully designed online learning management system (LMS) w
 - Email: `instructor@johurul.com`
 - Password: `In$tructor`
 
-## Technologies Used
+## Technologies
 
-- **React**: For building user interfaces and reusable components.
+### Frontend
 
-- **Firebase**: For managing authentication.
+- **React**: For component architecture.
+- **Firebase**: Handling authentication and user info.
+- **React Router**: Client side routing.
+- **Tanstack Query**: Fetching data from REST API.
+- **Tailwind CSS**: Designing the whole site.
+- **Radix UI**: Adding an accessible accordion in the FAQ section.
+- **Swiper JS**: Building carousel. 
+- **Framer Motion**: Page transitions and subtle animation.
 
-- **React Router**: For client side routing.
-  
-- **Tanstack Query**: Used for its easy data fetching and caching architecture.
+### Backend
 
-- **Tailwind CSS**: Used for designing the whole site.
-
-- **Radix UI**: Completely unstyled, fully accessible UI components. Used for adding accordion in the FAQ section.
-
-- **Swiper JS**: Used it for creating the testimonials card and the hero sections carousel. 
-
-- **Framer Motion**: Used for page transitions and subtle animation in the admin dashboard.
+- **Express**: Route handling and middleware.
+- **MongoDB**: Storing and managing data.
+- **Stripe**: Payment integration.
 
 ## Support
 
